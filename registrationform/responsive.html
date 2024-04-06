@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="response.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form action="/register" method="POST">
+      <div class="input-group">
+        <label for="name">Name</label>
+        <div class="input-icon">
+          <input type="text" id="name" name="name"  required>
+          <i class="fas fa-user"></i>
+        
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <div class="input-icon">
+          <input type="email" id="email" name="email" required>
+        <i class="fas fa-envelope"></i>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="input-icon">
+          <input type="password" id="password" name="password" required>
+        <i class="fas fa-lock"></i>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="confirm_password">Confirm Password</label>
+        <div class="input-icon">
+          <input type="password" id="confirm_password" name="confirm_password" required>
+        <i class="fas fa-lock"></i>
+        </div>
+      </div>
+      <div id="passwordMismatch" style="display: none;">
+        <p>Passwords do not match.</p>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <div id="successMessage" style="display: none;">
+      <h5 style="color:green;">Registration successful!</h5>
+    </div>
+  </div>
+  
+  <script src="resscript.js"></script>
+</body>
+</html>
